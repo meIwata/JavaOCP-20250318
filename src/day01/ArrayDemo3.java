@@ -1,5 +1,7 @@
 package day01;
 
+import java.util.stream.IntStream;
+
 public class ArrayDemo3 {
 
 	public static void main(String[] args) {
@@ -11,5 +13,10 @@ public class ArrayDemo3 {
 		for(int x:scores) {
 			System.out.println(x);
 		}
+		
+		System.out.println("----------------------");
+		
+		// 使用Java 8串流InStream
+		IntStream.of(scores).forEach(x ->System.out.println(x));
 	}
 }
