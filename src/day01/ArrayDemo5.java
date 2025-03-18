@@ -1,8 +1,5 @@
 package day01;
 
-import java.util.Arrays;
-import java.util.stream.IntStream;
-
 public class ArrayDemo5 {
 
 	public static void main(String[] args) {
@@ -18,5 +15,9 @@ public class ArrayDemo5 {
 		}
 		System.out.println("--------------");
 		System.out.println("總分: " + sum);
+		
+		//平均
+		int avg = sum/scores.length;
+		System.out.println("平均: " + avg);
 	}
 }
