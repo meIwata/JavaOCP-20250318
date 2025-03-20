@@ -22,8 +22,6 @@ public class CoffeeShop {
 		americano.size = '大';
 		americano.price = 50;
 		americano.hot=true;
-		americano.printinfo();
-		
+		americano.printinfo();	
 	}
-
 }
