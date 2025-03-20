@@ -25,9 +25,12 @@ public class OutfitStore {
 		
 		// 購物車
 		Outfit[] outfits = {outfit1, outfit2, outfit3, outfit4};
+		int total = 0;
 		for(int i=0;i<outfits.length;i++) {
 			outfits[i].printInfo();
+			total += outfits[i].price;
 		}
+		System.out.println("總共需付: $" + total);
 		
 	}
 	
