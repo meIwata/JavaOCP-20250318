@@ -17,8 +17,5 @@ public class MultiArrayDemo2 {
 		System.out.println(ttt[0]); 
 		System.out.println(ttt[1]);
 		System.out.println(ttt[2]);
-		
-
 	}
-
 }
