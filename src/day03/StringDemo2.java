@@ -11,7 +11,7 @@ public class StringDemo2 {
 		// sb.append("17").append("!"); //這樣寫一樣會改寫內容
 		
 		System.out.println(sb);
-		// System.out.println(sb.toString());//兩個是一樣的
+		// System.out.println(sb.toString());//加上.toString()也可以
 	}
 
 }
