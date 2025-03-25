@@ -12,7 +12,12 @@ public class StringDemo {
 		String s2 = "Java";
 		s2.concat("11"); // 並沒有把值賦予給s2
 		System.out.println(s2);
-
+		
+		
+		// 字串replace的應用
+		String s3 = "Java";
+		s3 = s3.replace('J', 'A'); //把J替換成A，並賦予到s3
+		System.out.println(s3);
 	}
 
 }
