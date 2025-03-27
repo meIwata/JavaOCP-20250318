@@ -16,6 +16,7 @@ public class BookStore2 {
 		
 		int total = 0;
 		for (Book book : books) {
+			System.out.println(book.getPrice());
 			total += book.getPrice();
 		}
 		System.out.println("總額: " + total);
