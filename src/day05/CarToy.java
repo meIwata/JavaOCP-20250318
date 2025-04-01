@@ -1,5 +1,7 @@
 package day05;
 
+import java.util.Arrays;
+
 // 車車
 public class CarToy {
 	private String name;
@@ -12,11 +14,32 @@ public class CarToy {
 		this.wheels = wheels;
 		this.battery = battery;
 		this.price = price + battery.getPrice();
-		
+
 		if (wheels != null && wheels.length > 0) {
-			for(Wheel wheel : wheels) {
+			for (Wheel wheel : wheels) {
 				this.price += wheel.getPrice();
 			}
 		}
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public int getPrice() {
+		return price;
+	}
+
+	public Battery getBattery() {
+		return battery;
+	}
+
+	public Wheel[] getWheels() {
+		return wheels;
+	}
+
+	public String toString() {
+		return String.format("CarToy name:%s price:%d battery:%s wheels:%s", name, price, battery,
+				Arrays.toString(wheels));
 	}
 }
