@@ -10,27 +10,38 @@ public class ToyStore {
 		Wheel wheelA = new Wheel(5, 10);
 		Wheel wheelB = new Wheel(7, 25);
 		Wheel wheelC = new Wheel(11, 40);
-		
+
 		// 輪子的組合
-		Wheel[] wheelsA = {wheelA, wheelA, wheelA, wheelA};
-		Wheel[] wheelsB = {wheelB, wheelB, wheelB, wheelB};
-		Wheel[] wheelsC = {wheelC, wheelC, wheelC, wheelC};
-		Wheel[] wheelsF = {wheelA, wheelB, wheelC, wheelC};
-		
+		Wheel[] wheelsA = { wheelA, wheelA, wheelA, wheelA };
+		Wheel[] wheelsB = { wheelB, wheelB, wheelB, wheelB };
+		Wheel[] wheelsC = { wheelC, wheelC, wheelC, wheelC };
+		Wheel[] wheelsF = { wheelA, wheelB, wheelC, wheelC };
+
 		// 玩具組合
 		CarToy carToy1 = new CarToy("藍寶堅尼", 250, wheelsC, batteryA);
 		CarToy carToy2 = new CarToy("砲彈飛車", 100, wheelsA, batteryAAAA);
 		DollToy dollToy1 = new DollToy("芭比娃娃", 750);
 		DollToy dollToy2 = new DollToy("電動芭比", 800, batteryAAA);
-		
+
 		// 玩具展示
 		System.out.println(carToy1);
 		System.out.println(carToy2);
 		System.out.println(dollToy1);
 		System.out.println(dollToy2);
-		
-		//總價
+
+		// 總價
 		int sum = carToy1.getPrice() + carToy2.getPrice() + dollToy1.getPrice() + dollToy2.getPrice();
-		System.out.println("總價: " + sum);
+		System.out.printf("總價: %,d%n" , sum);
+
+		// 利用物件陣列將所有玩具放在一個陣列中
+		Object[] toys = { carToy1, carToy2, dollToy1, dollToy2 };
+		for (Object toy : toys) {
+			// 判斷toy是否是CarToy
+			if (toy instanceof CarToy) {
+				System.out.printf("汽車玩具:%s%n", ((CarToy) toy).getName()); // 轉型後取名字
+			} else if (toy instanceof DollToy) { // 判斷toy是否是DollToy
+				System.out.printf("娃娃玩具:%s%n", ((DollToy) toy).getName()); // 轉型後取名字
+			}
+		}
 	}
 }
