@@ -2,7 +2,7 @@ package day06;
 
 // 工具(Singleton 單例模式)
 public class Util {
-	// add這個方法就是 方法重載（Method Overloading）
+// add這個方法就是 方法重載（Method Overloading）
 //	public int add(int x, int y) {
 //		return x + y;
 //	}
