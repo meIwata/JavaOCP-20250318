@@ -10,8 +10,9 @@ public class ClawMachineTest {
 		clawMachine.insertCoin();
 		clawMachine.play();
 		clawMachine.play();
-		((DeluxeClawMachine)clawMachine).playMusic(); // 透過強迫轉型來呼叫playMusic()
-		
+		if(clawMachine instanceof DeluxeClawMachine) {
+			((DeluxeClawMachine)clawMachine).playMusic(); // 透過強迫轉型來呼叫playMusic()
+		}
 		
 		System.out.println("-------------------------------------------");
 		
@@ -19,7 +20,7 @@ public class ClawMachineTest {
 		deluxeClawMachine.insertCoin();
 		deluxeClawMachine.play();
 		deluxeClawMachine.play();
-		deluxeClawMachine.playMusic();
+		deluxeClawMachine.playMusic(); // DeluxeClawMachine專屬方法
 	}
 
 }
