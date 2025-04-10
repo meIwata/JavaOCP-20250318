@@ -1,5 +1,7 @@
 package day07;
 
+import java.util.stream.Stream;
+
 public class CompanyTest {
 
 	public static void main(String[] args) {
@@ -33,6 +35,14 @@ public class CompanyTest {
 		System.out.println("--------------------------");
 
 		Manager[] managers = { manager, supervisor };
+		
+		
+		// 利用java stream 的 foreach
+		Stream.of(managers)
+				.forEach(mgr -> {
+					System.out.println(mgr.salary);
+					System.out.println(mgr.budget);
+				});
 
 	}
 
